@@ -14,6 +14,7 @@ body {
 
 h2 {
     text-align: center;
+    margin-bottom: 2rem;
     padding: 1rem;
     font-size: 2rem;
     font-family: 'Shizuru', cursive;
@@ -22,6 +23,7 @@ h2 {
 .contents-header {
     font-size: 1.5rem;
     font-family: 'Raleway', sans-serif;
+
 }
 
 .wrapper {
@@ -39,10 +41,33 @@ h2 {
 }
 
 .banner.active {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
     display: block;
     position: absolute;
-    justify-self: center;
+    background-color: rgba(0,0,0,0.54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner.active::after {
+    display: flex;
     align-self: center;
+    justify-content: center;
+    content:"X";
+    font-weight: 800;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    margin: 1rem;
+    cursor: pointer;
+
 }
 
 img {
@@ -75,12 +100,29 @@ max-width: 600px;
     color: wheat;
 }
 
+#desc:hover {
+    transform: scale(1.1);
+}
+
 .release-date {
 margin: 1rem;
 }
 
 .contents {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(150px, 200px));
+    padding: .4rem 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+    background: red;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 0.7rem;
 
+}
+
+.contents:hover {
+    color: gold;
 }

@@ -3,6 +3,8 @@ const image = document.getElementById('image')
 const desc = document.getElementById('desc')
 const release = document.getElementById('release')
 const banner = document.querySelector('.banner')
+const bannerImg = document.querySelector('.banner-img')
+
 
 const dropDownChoices = document.getElementById('ghibli-pick')
 dropDownChoices.addEventListener('change', changeSelectValue)
@@ -186,7 +188,17 @@ ghibliFilms.forEach(ghibliFilm => {
     title.innerText = data.films[index].title
     image.src = data.films[index].movie_banner
     desc.innerHTML = data.films[index].description
-    release.innerText = data.films[index].release_date
+    release.innerText = data.films[index].release_date    
+    bannerImg.src = data.films[index].image
+    banner.classList.add('active')
+
+    closeModal()
   });
 })
 })
+
+function closeModal() {
+  banner.addEventListener('click', ()=> {
+    banner.classList.remove('active')
+  })
+}
