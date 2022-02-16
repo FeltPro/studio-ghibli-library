@@ -98,10 +98,6 @@ box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px
     font-size: 1.1rem;
 }
 
-#desc:hover {
-    transform: scale(1.1);
-}
-
 .release-date {
     margin: 1rem;
 }
