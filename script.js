@@ -4,6 +4,7 @@ const desc = document.getElementById('desc')
 const release = document.getElementById('release')
 const banner = document.querySelector('.banner')
 const bannerImg = document.querySelector('.banner-img')
+const posterItems = document.querySelectorAll('[data-ghibli]')
 
 
 const dropDownChoices = document.getElementById('ghibli-pick')
@@ -202,3 +203,14 @@ function closeModal() {
     banner.classList.remove('active')
   })
 }
+
+posterItems.forEach(posterItem => {
+  posterItem.addEventListener('mouseover', () => {
+    posterItem.style.color = "gold"
+    posterItem.style.transform = "scale(1.1)"
+  })
+  posterItem.addEventListener('mouseout', () => {
+    posterItem.style.color = "white"
+    posterItem.style.transform = "scale(1)"
+  })
+})
